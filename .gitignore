@@ -89,5 +89,5 @@ ENV/
 .ropeproject
 
 tags
-.directory/
+.directory
 *.swp
