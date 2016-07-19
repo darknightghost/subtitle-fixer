@@ -10,9 +10,9 @@ subtitle-fixer [options] -i input -o output
 ```
 ###参数列表:
 ```
-	--encode=文件编码					设置文件编码(默认utf-8)
-	--help                              显示帮助
-	--offset=时间偏移量					调整字幕起始时间
+	--encode=文件编码				设置文件编码(默认utf-8)
+	--help                         显示帮助
+	--offset=时间偏移量				调整字幕起始时间
 	--speed=倍率						调整字幕播放速度
 		--speed=视频中时间/字幕中时间
 ```
