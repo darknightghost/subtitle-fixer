@@ -118,7 +118,8 @@ def run_command(a, cmd):
                 video_time = time_to_seconds(l[1].split("/")[0])
                 subtitle_time = time_to_seconds(l[1].split("/")[1])
                 subtitle_time = subtitle_time + offset
-                rate = video_time / subtitle_time
+                start_time = a.start_time()
+                rate = (video_time - start_time) / (subtitle_time - start_time)
             except ValueError:
                 try:
                     rate = int(l[1])

@@ -180,17 +180,19 @@ class analyser(base_analyser):
         return
 
     def speed(self, rate):
+        start = self.start_time()
         for l in self.lines:
             if type(l) == DialogueLine:
-                l.start = l.start * rate
-                l.end = l.end * rate
+                last_time = l.end - l.start
+                l.start = int((l.start - start) * rate) + start
+                l.end = l.start + last_time
         return
 
     def offset(self, offset):
         for l in self.lines:
             if type(l) == DialogueLine:
-                l.start = l.start + offset
-                l.end = l.end + offset
+                l.start = int(l.start + offset)
+                l.end = int(l.end + offset)
         return
 
     def save(self, path):
@@ -198,3 +200,15 @@ class analyser(base_analyser):
         for l in self.lines:
             f.write(str(l))
         f.close()
+
+
+    def start_time(self):
+        ret = -1
+        for l in self.lines:
+            if type(l) == DialogueLine:
+                if ret == -1:
+                    ret = l.start
+                elif ret > l.start:
+                    ret = l.start
+
+        return ret

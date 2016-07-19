@@ -31,3 +31,6 @@ class analyser:
     def save(self, path):
         pass
 
+    def start_time(self):
+        pass
+
