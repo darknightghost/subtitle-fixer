@@ -91,3 +91,6 @@ ENV/
 tags
 .directory
 *.swp
+*.ass
+*.srt
+*.mp4

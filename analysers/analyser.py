@@ -18,3 +18,16 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
+class analyser:
+    def __init__(self, path, encoding):
+        pass
+
+    def speed(self, rate):
+        pass
+
+    def offset(self, offset):
+        pass
+
+    def save(self, path):
+        pass
+

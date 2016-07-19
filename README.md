@@ -6,16 +6,16 @@
 
 ###用法:
 ```bash
-subtitle-fixer [options] -i input -o output
+subtitle-fixer [options] --type=file-type -i input -o output
 ```
 ###参数列表:
 ```
-	--encode=文件编码					设置文件编码(默认utf-8)
-	--help							显示帮助
-	--offset=时间偏移量				调整字幕起始时间
-	--speed=倍率						调整字幕播放速度
-		--speed=视频中时间/字幕中时间
+    --encode=文件编码                 设置文件编码(默认utf-8)
+    --help                           显示帮助
+    --offset=时间偏移量               调整字幕起始时间
+    --speed=倍率                     调整字幕播放速度
+        --speed=视频中时间/字幕中时间
 ```
-时间的格式按照"时:分:秒:百分数"
+时间的格式按照"时:分:秒"
 ##关于如何支持其他的格式
 在analyser目录下下派生analyser类就可以支持其他格式,具体可以看analyser.py和ass.py应该很好懂.
